@@ -118,5 +118,4 @@
         app:layout_constraintEnd_toStartOf="@+id/line_right"
         app:layout_constraintStart_toEndOf="@id/emailButton" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
