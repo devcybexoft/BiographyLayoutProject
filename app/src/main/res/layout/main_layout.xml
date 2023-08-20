@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textAlignment="center">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_agenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="152dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/topBackgroundTextView"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@color/material_dynamic_neutral_variant70"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/max_photo"
+        app:layout_constraintStart_toEndOf="@id/line_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@id/position"
+        app:layout_constraintStart_toEndOf="@id/line_agenda"
+        app:layout_constraintTop_toBottomOf="@id/topBackgroundTextView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Position"
+        app:layout_constraintBottom_toBottomOf="@id/photoImageView"
+        app:layout_constraintStart_toEndOf="@id/line_agenda"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/biography"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Biography of person start here"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@id/emailButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/line_left"
+        app:layout_constraintRight_toLeftOf="@id/line_right"
+        app:layout_constraintTop_toBottomOf="@id/photoImageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="name, position" />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintBottom_toBottomOf="@id/line_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/phoneButton"
+        app:layout_constraintStart_toStartOf="@+id/line_agenda" />
+
+    <Button
+        android:id="@+id/phoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        app:layout_constraintBottom_toBottomOf="@id/line_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/line_right"
+        app:layout_constraintStart_toEndOf="@id/emailButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
